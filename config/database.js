@@ -10,7 +10,10 @@ module.exports = ({ env }) => ({
         database: process.env.DATABASE_NAME,
         username: process.env.DATABASE_USERNAME,
         password: process.env.DATABASE_PASSWORD,
-        ssl: process.env.DATABASE_SSL.toLowerCase() === "true",
+        ssl: !!(
+          process.env.DATABASE_SSL &&
+          process.env.DATABASE_SSL.toLowerCase() === "true"
+        ),
       },
       options: {},
     },
