@@ -1,0 +1,31 @@
+cd repos/carib-strapi
+ls -l
+sudo docker build -t carib-strapi .
+sudo docker images
+sudo docker tag 8d6adae001eb 622500790463.dkr.ecr.us-east-1.amazonaws.com/courserv/carib-strapi
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/courserv/carib-strapi
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 622500790463.dkr.ecr.us-east-1.amazonaws.com
+sudo apt-get update
+sudo apt-get install awscli
+aws --version
+aws configure
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 622500790463.dkr.ecr.us-east-1.amazonaws.com
+sudo aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 622500790463.dkr.ecr.us-east-1.amazonaws.com
+sudo aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 622500790463.dkr.ecr.us-east-1.amazonaws.com
+sudo docker tag 8d6adae001eb 622500790463.dkr.ecr.us-east-1.amazonaws.com/courserv/carib-strapi
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/courserv/carib-strapi
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/carib-strapi
+sudo docker tag 8d6adae001eb 622500790463.dkr.ecr.us-east-1.amazonaws.com/carib-strapi
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/carib-strapi
+docker images
+sudo docker images
+clear
+sudo docker images
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/carib-strapi
+sudo docker tag 8d6adae001eb 622500790463.dkr.ecr.us-east-1.amazonaws.com/carib_strapi
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/carib_strapi
+docker images
+sudo docker images
+sudo docker build -t courserv .
+sudo docker tag courserv:latest 622500790463.dkr.ecr.us-east-1.amazonaws.com/courserv:latest
+sudo docker push 622500790463.dkr.ecr.us-east-1.amazonaws.com/courserv:latest
